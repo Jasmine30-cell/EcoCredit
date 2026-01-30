@@ -1,0 +1,136 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 20%;
+
+    --primary: 150 65% 47%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 200 70% 48%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 160 65% 52%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 91%;
+    --input: 210 20% 96%;
+    --ring: 150 65% 47%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 210 20% 25%;
+
+    --sidebar-primary: 150 65% 47%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 200 70% 48%;
+
+    --sidebar-accent-foreground: 0 0% 100%;
+
+    --sidebar-border: 210 20% 91%;
+
+    --sidebar-ring: 150 65% 47%;
+
+    /* Eco-friendly color palette */
+    --eco-green: 150 65% 47%;
+    --eco-green-light: 150 65% 85%;
+    --eco-green-dark: 150 65% 32%;
+    --eco-blue: 200 70% 48%;
+    --eco-blue-light: 200 70% 85%;
+    --eco-blue-dark: 200 70% 32%;
+  }
+
+  .dark {
+    --background: 210 20% 10%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 20% 15%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 20% 15%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 150 65% 52%;
+    --primary-foreground: 210 20% 10%;
+
+    --secondary: 200 70% 52%;
+    --secondary-foreground: 210 20% 10%;
+
+    --muted: 210 20% 30%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 160 65% 57%;
+    --accent-foreground: 210 20% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 10%;
+
+    --border: 210 20% 25%;
+    --input: 210 20% 25%;
+    --ring: 150 65% 52%;
+    --sidebar-background: 210 20% 12%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 150 65% 52%;
+    --sidebar-primary-foreground: 210 20% 10%;
+    --sidebar-accent: 200 70% 48%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 210 20% 25%;
+    --sidebar-ring: 150 65% 52%;
+
+    /* Eco-friendly color palette for dark mode */
+    --eco-green: 150 65% 52%;
+    --eco-green-light: 150 65% 70%;
+    --eco-green-dark: 150 65% 35%;
+    --eco-blue: 200 70% 52%;
+    --eco-blue-light: 200 70% 70%;
+    --eco-blue-dark: 200 70% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
